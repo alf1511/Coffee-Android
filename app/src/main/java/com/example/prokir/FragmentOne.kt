@@ -8,12 +8,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.prokir.database.AppDao
-import com.example.prokir.database.AppDatabase
-import com.example.prokir.database.Customer
+import com.example.prokir.database.*
 import com.example.prokir.databinding.FragmentOneBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.text.DateFormat
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.*
 
 class FragmentOne : Fragment(R.layout.fragment_one)
 {
@@ -27,30 +29,45 @@ class FragmentOne : Fragment(R.layout.fragment_one)
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        dao = AppDatabase.getInstance(requireContext()).getDao()
         binding = FragmentOneBinding.inflate(layoutInflater)
+        activity?.runOnUiThread{
+            GlobalScope.launch {
+                adapter = TransactionAdapter(dao.getAllOrders())
+            }
+        }
         return inflater.inflate(R.layout.fragment_one, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dao = AppDatabase.getInstance(requireContext()).getDao()
+//        GlobalScope.launch{
+//            dao.deleteAllOrder()
+//        }
         recyclerView = view.findViewById(R.id.records)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.setHasFixedSize(true)
-        GlobalScope.launch {
-//            dao.deleteAllCustomer()
-            initData() //memanggil function di dalam coroutine
-            Log.i(null, dao.getAllCustomers().size.toString())
-//            val data =
-//            binding.records.layoutManager = LinearLayoutManager(parentFragment?.context)
-            adapter = TransactionAdapter(dao.getAllCustomers())
-            recyclerView.adapter = adapter
-        }
+        recyclerView.adapter = adapter
+
     }
 
     private fun initData(){
 //        val cust1 = Customer("Jang Hyun", "Korea", "08237141234")
 //        val cust2 = Customer("Pesa Chang", "Italy", "08237141235")
 //        dao.insert(cust1, cust2)
+//        val p1 = Product("Kopi Hitam", 50000, 25, "-")
+//        val p2 = Product("Kopi Putih", 52000, 28, "-")
+//        dao.insert(p1, p2)
+//        val dateFormat : DateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss ")
+//        val date: Date = Date()
+//        val dateTime = dateFormat.format(date)
+//        val o1 = Order(1, dateTime, 5000, 100000)
+//        val o2 = Order(2, dateTime, 5000, 104000)
+//        dao.insert(o1, o2)
+//        GlobalScope.launch {
+//            val oi1 = OrderItems(1, 1, 2, dao.searchProductById(1).harga?.times(2))
+//            val oi2 = OrderItems(2, 2, 2, dao.searchProductById(2).harga?.times(2))
+//            dao.insert(oi2)
+//        }
     }
 }

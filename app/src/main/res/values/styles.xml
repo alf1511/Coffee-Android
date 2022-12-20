@@ -4,4 +4,7 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">30dp</item>
     </style>
+    <style name="editText" parent="">
+        <item name="colorAccent">@color/white</item>
+    </style>
 </resources>

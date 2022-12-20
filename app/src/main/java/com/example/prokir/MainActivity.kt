@@ -6,7 +6,7 @@ import com.example.prokir.database.*
 import com.example.prokir.databinding.ActivityMainBinding
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), Communicator{
     private lateinit var binding: ActivityMainBinding
     private lateinit var db: AppDatabase
 
@@ -18,12 +18,30 @@ class MainActivity : AppCompatActivity() {
 //            .fallbackToDestructiveMigration()
 //            .build()
         val fragOne = FragmentOne()
+        val fragThree = FragmentThree()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.main_frag, fragOne)
             commit()
         }
 
+        binding.addTrans.setOnClickListener{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.main_frag, fragThree)
+                commit()
+            }
+        }
+
+    }
+
+    override fun passData(prod_id: Int) {
+        val bundle = Bundle()
+        bundle.putInt("prod_id", prod_id)
+        val trans = this.supportFragmentManager.beginTransaction()
+        val fthree = FragmentThree()
+        fthree.arguments = bundle
+        trans.replace(R.id.main_frag, fthree)
+        trans.commit()
     }
 //    private fun initData(){
 //        val cust1 = Customer("Jang Hyun", "Korea", "08237141234")

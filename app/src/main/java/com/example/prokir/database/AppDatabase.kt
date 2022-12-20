@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Customer::class, Product::class, Order::class, OrderItems::class], version = 2, exportSchema = true)
+@Database(entities = [Customer::class, Product::class, Order::class, OrderItems::class], version = 5, exportSchema = true)
 abstract class AppDatabase: RoomDatabase() {
     abstract fun getDao(): AppDao
     companion object{
@@ -19,7 +19,7 @@ abstract class AppDatabase: RoomDatabase() {
             }
             synchronized(this){
                 val instance = Room.databaseBuilder(context.applicationContext, AppDatabase::class.java, DB_NAME)
-//                    .fallbackToDestructiveMigration()
+                    .fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 return instance

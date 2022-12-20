@@ -18,7 +18,6 @@ data class Order (
     @ColumnInfo(name = "cust_id") val cust_id: Int?,
     @ColumnInfo(name = "tanggalPembelian") val tanggalPembelian: String?,
     @ColumnInfo(name = "ongkir") val ongkir: Int?,
-    @ColumnInfo(name = "diskonPengiriman") val diskonPengiriman: Int?,
     @ColumnInfo(name = "subtotal") val subtotal: Int?
 ){
     @PrimaryKey(autoGenerate = true)

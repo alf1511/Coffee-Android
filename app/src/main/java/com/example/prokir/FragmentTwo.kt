@@ -31,7 +31,6 @@ class FragmentTwo : Fragment(R.layout.fragment_two)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val saveProduct = createButtonClickObservable()
         Log.i(null, dao.getAllCustomers().size.toString())
     }
 

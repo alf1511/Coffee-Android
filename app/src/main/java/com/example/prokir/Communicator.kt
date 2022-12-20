@@ -1,4 +1,5 @@
 package com.example.prokir;
 
-public interface Communicator {
+interface Communicator {
+    fun passData(prod_id: Int)
 }

@@ -12,10 +12,17 @@ import androidx.room.PrimaryKey
         childColumns = ["order_id"],
         parentColumns = ["order_id"],
         onDelete = CASCADE
+    ),
+    ForeignKey(
+        entity = Product::class,
+        childColumns = ["product_id"],
+        parentColumns = ["product_id"],
+        onDelete = CASCADE
     )
 ])
 data class OrderItems (
     @ColumnInfo(name = "order_id") val order_id: Int?,
+    @ColumnInfo(name = "product_id") val product_id: Int?,
     @ColumnInfo(name = "kuantitas") val kuantitas: Int?,
     @ColumnInfo(name = "totalHarga") val totalHarga: Int?,
 ){

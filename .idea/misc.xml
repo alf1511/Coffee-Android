@@ -7,6 +7,7 @@
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/brown.xml" value="0.1525" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/circle.xml" value="0.1525" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/circle_brown.xml" value="0.14666666666666667" />
+        <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/dropcust.xml" value="0.1525" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/gradient1.xml" value="0.1525" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1525" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/ic_baseline_content_paste_24.xml" value="0.137" />
@@ -15,13 +16,20 @@
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/ic_coffee_background.xml" value="0.1525" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/roundb16browncombined.xml" value="0.1525" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/rounded.xml" value="0.1525" />
+        <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/rounded100.xml" value="0.1525" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/rounded15.xml" value="0.1525" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/rounded6.xml" value="0.1525" />
+        <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/roundedbottom10.xml" value="0.1525" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/roundedbottom16.xml" value="0.1525" />
+        <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/roundedbottom16white.xml" value="0.1525" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/roundedtop16.xml" value="0.13333333333333333" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/drawable/scndcirclecolor.xml" value="0.1525" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/layout/dropdown_item.xml" value="0.19895833333333332" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/layout/fragment_one.xml" value="0.2" />
+        <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/layout/fragment_products.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/layout/fragment_three.xml" value="0.22" />
+        <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/layout/fragment_threepointone.xml" value="0.2" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/layout/fragment_two.xml" value="0.1859375" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/layout/home.xml" value="0.2" />
         <entry key="..\:/Android Studio Projects/Prokir/app/src/main/res/layout/item.xml" value="0.2" />

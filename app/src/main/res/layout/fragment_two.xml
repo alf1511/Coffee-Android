@@ -117,18 +117,19 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_camera" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/save"
         android:layout_width="180dp"
-        android:textColor="@color/white"
-        android:textSize="16sp"
         android:layout_height="40dp"
-        android:background="@drawable/rounded15"
+        android:layout_below="@id/image"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold"
         android:layout_marginTop="20dp"
+        android:background="@drawable/rounded15"
         android:backgroundTint="#967259"
         android:gravity="center"
-        android:layout_below="@id/image"
-        android:text="Save"/>
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 </RelativeLayout>

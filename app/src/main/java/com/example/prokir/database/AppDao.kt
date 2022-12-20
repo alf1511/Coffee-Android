@@ -19,6 +19,9 @@ interface AppDao {
 
     @Query("DELETE FROM customer")
     fun deleteAllCustomer()
+
+    @Query("SELECT * FROM customer WHERE cust_id = :id")
+    fun searchCustomerById(id: Int): Customer
 //    order
     @Query("SELECT * FROM `order`")
     fun getAllOrders():List<Order>
@@ -31,6 +34,10 @@ interface AppDao {
 
     @Query("DELETE FROM `order`")
     fun deleteAllOrder()
+
+    @Query("SELECT * FROM `order` ORDER BY order_id DESC LIMIT 1")
+    fun getNewestOrder(): Order
+
 //    orderitems
     @Query("SELECT * FROM orderitems")
     fun getAllOrderItems():List<OrderItems>
@@ -43,6 +50,10 @@ interface AppDao {
 
     @Query("DELETE FROM orderitems")
     fun deleteAllOrderItems()
+
+    @Query("SELECT * FROM orderitems WHERE order_id=:order_id")
+    fun searchOrderItemsById(order_id: Int): List<OrderItems>
+
 //    product
     @Query("SELECT * FROM product")
     fun getAllProducts():List<Product>
@@ -55,4 +66,7 @@ interface AppDao {
 
     @Query("DELETE FROM product")
     fun deleteAllProducts()
+
+    @Query("SELECT * FROM product WHERE product_id = :id")
+    fun searchProductById(id: Int): Product
 }

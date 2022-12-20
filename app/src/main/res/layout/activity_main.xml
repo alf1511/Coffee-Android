@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_above="@id/menu"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true" >
+    </FrameLayout>
     <LinearLayout
         android:id="@+id/menu"
         android:layout_alignParentBottom="true"
@@ -62,6 +63,8 @@
                 android:text="Statistic"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/addTrans"
+            android:pointerIcon="hand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="12dp"

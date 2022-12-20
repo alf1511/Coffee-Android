@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 2,
-    "identityHash": "c93a48273fd185afa4a1b691fdde148d",
+    "identityHash": "0404bd1b3137ce4c74ecaf29856d932e",
     "entities": [
       {
         "tableName": "Customer",
@@ -44,7 +44,7 @@
       },
       {
         "tableName": "Product",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`namaProduk` TEXT, `harga` INTEGER, `stok` INTEGER, `product_id` INTEGER PRIMARY KEY AUTOINCREMENT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`namaProduk` TEXT, `harga` INTEGER, `stok` INTEGER, `imagePath` TEXT, `product_id` INTEGER PRIMARY KEY AUTOINCREMENT)",
         "fields": [
           {
             "fieldPath": "namaProduk",
@@ -62,6 +62,12 @@
             "fieldPath": "stok",
             "columnName": "stok",
             "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imagePath",
+            "columnName": "imagePath",
+            "affinity": "TEXT",
             "notNull": false
           },
           {
@@ -196,7 +202,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c93a48273fd185afa4a1b691fdde148d')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0404bd1b3137ce4c74ecaf29856d932e')"
     ]
   }
 }
